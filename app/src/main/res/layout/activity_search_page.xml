@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:background="@drawable/sp_search_box_bg"
+            android:drawableLeft="@mipmap/icon_small_search"
+            android:drawablePadding="10dip"
+            android:gravity="left|center"
+            android:hint="请输入关键字"
+            android:textCursorDrawable="@drawable/color_cursor_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#3682cc" />
+    </RelativeLayout>
+
+    <View style="@style/LineHorizontal" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f5f7"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_recommendbar1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recommend_bar_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:overScrollMode="never"></android.support.v7.widget.RecyclerView>
+
+            <View
+                style="@style/LineHorizontal"
+                android:layout_marginTop="10dip" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@android:color/white"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip">
+
+                <TextView
+                    android:id="@+id/tv_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="历史记录"
+                    android:onClick="onClick"
+                    android:textColorHint="#939393"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_history"
+                    android:onClick="onClick"
+                    android:rotation="180"
+                    android:src="@mipmap/icon_arrow_up" />
+
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClick"
+                    android:src="@mipmap/icon_dustbin" />
+
+                <TextView
+                    android:id="@+id/tv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:hint="完成"
+                    android:onClick="onClick"
+                    android:textColorHint="#939393"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineHorizontal"
+                android:paddingRight="10dip" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recommend_bar_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:overScrollMode="never"></android.support.v7.widget.RecyclerView>
+
+
+            <View
+                style="@style/LineHorizontal"
+                android:layout_marginTop="10dip" />
+
+            <LinearLayout
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear_show_recommend"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip">
+
+                    <ImageView
+                        android:src="@mipmap/icon_show_recommend"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip" />
+
+                <TextView
+                    android:id="@+id/tv_show_recommend"
+                    android:layout_marginLeft="5dip"
+                    android:text="查看全部推荐词"
+                    android:textColor="#939393"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_recommendbar2"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:background="@android:color/white"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:hint="猜你想搜"
+                            android:textColorHint="#939393"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_recommend_toggle"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:onClick="onClick"
+                            android:src="@mipmap/icon_hide_recommend" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/LineHorizontal" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_recommend_bar_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:overScrollMode="never"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
