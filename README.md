@@ -20,7 +20,7 @@
 ### 示例2：显示推荐词栏top+历史纪录（显示全部）+推荐词栏bottom
  <img src="https://github.com/samlss/SearchPage/blob/master/screenshots/screenshot2.png" width = "240" height = "480" alt="screentshot1" align=center />
  
- ### 基本示例3：显示推荐词栏top+历史纪录（删除）+推荐词栏bottom
+ ### 示例3：显示推荐词栏top+历史纪录（删除）+推荐词栏bottom
  <img src="https://github.com/samlss/SearchPage/blob/master/screenshots/screenshot4.png" width = "240" height = "480" alt="screentshot1" align=center />
 
 <br><br>
