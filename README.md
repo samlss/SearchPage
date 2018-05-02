@@ -7,6 +7,8 @@
 
 <br>
 
+**如果对你开发起到帮助，请star一下；**<br>
+
 ### 基本功能
 **1.显示推荐词栏top：绑定推荐词top数据，使用RecyclerView显示；**<br><br>
 **2.显示历史记录：绑定历史记录数据，使用RecyclerView显示；**<br><br>
